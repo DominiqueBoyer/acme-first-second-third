@@ -1,0 +1,18 @@
+h1{
+ color: red;
+ text-align: center;
+}
+body{
+  padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#lists{
+  display: flex;
+
+}
+#first, #second, #third {
+  border: solid 1px red;
+  width: 30%;
+  padding: 1rem;
+  margin: 2rem;
+}
