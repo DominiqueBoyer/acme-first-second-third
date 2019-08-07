@@ -1,5 +1,5 @@
 h1{
- color: red;
+ color: tomato;
  text-align: center;
 }
 body{
@@ -15,4 +15,27 @@ body{
   width: 30%;
   padding: 1rem;
   margin: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+button{
+  width: 100%;
+  height: 3rem;
+  // background-color: tomato;
+
+}
+
+#firstPeople, #secondPeople, #thirdPeople {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: normal;
+
+}
+#firstPeople, #secondPeople, #thirdPeople div {
+
+  height: 3rem;
+  justify-content: center;
+  border: solid 1px white
 }
