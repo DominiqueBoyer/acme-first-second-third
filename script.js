@@ -1,7 +1,12 @@
 const firstPeople = document.querySelector('#firstPeople');
 const secondPeople = document.querySelector('#secondPeople');
 const thirdPeople = document.querySelector('#thirdPeople');
-const button2 = document.querySelectorAll('#two');
+const firstArr = document.querySelector('#firstArrows');
+const secondArr = document.querySelector('#secondArrows');
+const thirdArr = document.querySelector('#thirdArrows');
+
+
+
 
 const slots = ['first', 'second', 'third'];
 
@@ -81,3 +86,18 @@ thirdPeople.addEventListener('click', ev => {
 
 console.log(users)
 
+firstArr.addEventListener('click', (ev)=>{
+  console.log(ev.target.parentNode.parentNode.childNodes[5])
+
+
+})
+
+secondArr.addEventListener('click', (ev)=>{
+  console.log(ev.target)
+
+})
+
+thirdArr.addEventListener('click', (ev)=>{
+  console.log(ev.target)
+
+})

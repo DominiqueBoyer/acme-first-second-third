@@ -33,7 +33,7 @@ button{
   font-weight: normal;
 
 }
-#firstPeople, #secondPeople, #thirdPeople div {
+#firstPeople div, #secondPeople div, #thirdPeople div {
 
   height: 3rem;
   justify-content: center;
