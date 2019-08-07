@@ -87,7 +87,13 @@ thirdPeople.addEventListener('click', ev => {
 console.log(users)
 
 firstArr.addEventListener('click', (ev)=>{
-  console.log(ev.target.parentNode.parentNode.childNodes[5])
+  let parent= ev.target.parentNode.parentNode.childNodes[5];
+  let event = parent.childNodes[0];
+  parent.removeChild(parent.childNodes[0])
+  let next = ev.target.parentNode.parentNode.parentNode.childNodes[3].childNodes[3];
+  console.log(event)
+  next.innerHTML += `<div>${event.innerHTML}</div>`
+
 
 
 })
