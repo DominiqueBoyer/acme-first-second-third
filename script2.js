@@ -10,20 +10,56 @@ const users = [
 
 const render = (slot)=>{
   const column = document.querySelector(`#${slot}`);
-  const html = users.map(person => {
+  const people = users.map(person => {
     if(person.slot === `${slot}`){
-      return `<button> < </button>
-      <button> > </button>
-      <h2>${slot}</h2>
-      <ul>
-      
-
-      `
+      return `<li data-idx='${person.id}'> ${person.name}</li>`
     }
-  })
-
+  }).join('');
+  const html  =
+    `<button> < </button>
+    <button> > </button>
+    <h2>${slot.toUpperCase()}</h2>
+    <div>${people}</div>`
   column.innerHTML = html;
-
-
-
 }
+
+slots.forEach(slot =>{render(slot)});
+
+
+first.addEventListener('click', ev => {
+  if(ev.target.getAttribute('selected')=== 'true'){
+    ev.target.setAttribute('selected', 'false')
+    ev.target.setAttribute('id', ' ')
+  }
+  else{
+    ev.target.setAttribute('selected', 'true');
+    ev.target.setAttribute('id', 'Selected');
+    users
+  };
+  console.log(ev.target)
+})
+
+second.addEventListener('click', ev => {
+  console.log(ev.target)
+  if(ev.target.getAttribute('selected')=== 'true'){
+    ev.target.setAttribute('selected', 'false')
+    ev.target.setAttribute('id', ' ')
+  }
+  else{
+    ev.target.setAttribute('selected', 'true');
+    ev.target.setAttribute('id', 'Selected');
+    users
+  };
+})
+third.addEventListener('click', ev => {
+  console.log(ev.target)
+  if(ev.target.getAttribute('selected')=== 'true'){
+    ev.target.setAttribute('selected', 'false')
+    ev.target.setAttribute('id', ' ')
+  }
+  else{
+    ev.target.setAttribute('selected', 'true');
+    ev.target.setAttribute('id', 'Selected');
+    users
+  };
+})
